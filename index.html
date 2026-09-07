@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hari Up Group — Enterprise Technology & Digital Transformation Partner. ERP, SAP, Odoo, IFS, Acumatica, Oracle, Microsoft 365, Power BI and business automation.">
+<title>Hari Up Group | Smart Technology. Better Business.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1557B0;
+  --blue2:#0A3F8F;
+  --ink:#071426;
+  --muted:#64748B;
+  --line:rgba(21,87,176,.13);
+  --soft:#F4F8FD;
+  --white:#fff;
+  --dark:#061225;
+  --shadow:0 22px 70px rgba(7,20,38,.10);
+  --radius:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+.container{width:min(1180px,92%);margin:auto}
+.topbar{height:36px;background:var(--dark);color:#cbd5e1;font-size:12px;display:flex;align-items:center}
+.topbar .container{display:flex;justify-content:space-between}
+.topbar span{display:flex;gap:8px;align-items:center}
+.nav{height:78px;display:flex;align-items:center;position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(7,20,38,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk";font-weight:700;font-size:22px;letter-spacing:-.8px}
+.logo img{width:145px;height:auto;object-fit:contain}
+.nav-links{display:flex;gap:26px;align-items:center;font-size:13px;font-weight:600;color:#334155}
+.nav-links a{transition:.25s}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta,.hero-btn,.form-btn{border:0;background:var(--blue);color:#fff;padding:13px 20px;border-radius:12px;font-weight:700;cursor:pointer;box-shadow:0 10px 25px rgba(21,87,176,.22);transition:.25s}
+.nav-cta:hover,.hero-btn:hover,.form-btn:hover{transform:translateY(-2px);background:var(--blue2)}
+.menu{display:none;background:none;border:0;font-size:26px}
+.hero{position:relative;padding:105px 0 95px;overflow:hidden;background:radial-gradient(circle at 85% 15%,rgba(21,87,176,.13),transparent 30%),linear-gradient(180deg,#fff 0%,#f7faff 100%)}
+.hero:before{content:"";position:absolute;width:480px;height:480px;border:1px solid rgba(21,87,176,.08);border-radius:50%;right:-190px;top:-120px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--blue);font-size:12px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:22px}
+.eyebrow:before{content:"";width:30px;height:2px;background:var(--blue)}
+h1{font-family:"Space Grotesk";font-size:clamp(48px,6vw,78px);line-height:.98;letter-spacing:-4px;max-width:760px}
+.gradient{color:var(--blue)}
+.hero-copy{font-size:18px;line-height:1.75;color:#526174;max-width:650px;margin:26px 0 32px}
+.btn-row{display:flex;gap:12px;flex-wrap:wrap}
+.hero-btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.hero-btn.secondary:hover{background:var(--soft);color:var(--blue)}
+.hero-note{display:flex;gap:18px;flex-wrap:wrap;margin-top:27px;color:#64748b;font-size:12px;font-weight:600}
+.hero-note span{display:flex;gap:7px;align-items:center}
+.hero-note b{color:var(--blue)}
+.planet{position:relative;min-height:480px;display:grid;place-items:center}
+.orbit{position:absolute;border:1px solid rgba(21,87,176,.16);border-radius:50%;animation:spin 18s linear infinite}
+.orbit.o1{width:400px;height:400px}.orbit.o2{width:290px;height:290px;animation-duration:13s;animation-direction:reverse}.orbit.o3{width:180px;height:180px;animation-duration:9s}
+.core{width:150px;height:150px;border-radius:42px;background:linear-gradient(145deg,#fff,#eaf2fc);border:1px solid rgba(21,87,176,.16);box-shadow:0 25px 70px rgba(21,87,176,.18);display:grid;place-items:center;text-align:center;z-index:2}
+.core strong{font-family:"Space Grotesk";font-size:20px}.core small{display:block;color:var(--blue);margin-top:5px;font-weight:800;font-size:9px;letter-spacing:1.5px}
+.float-card{position:absolute;background:rgba(255,255,255,.9);backdrop-filter:blur(15px);border:1px solid rgba(21,87,176,.12);box-shadow:var(--shadow);padding:14px 17px;border-radius:16px;z-index:3;min-width:130px;animation:float 4s ease-in-out infinite}
+.float-card b{display:block;font-size:12px}.float-card small{color:#64748b;font-size:10px}
+.c1{top:35px;right:20px}.c2{bottom:65px;right:0;animation-delay:1s}.c3{bottom:20px;left:20px;animation-delay:1.7s}.c4{top:100px;left:0;animation-delay:.5s}
+.section{padding:105px 0}.soft{background:var(--soft)}
+.section-head{max-width:720px;margin-bottom:48px}.kicker{font-size:11px;text-transform:uppercase;letter-spacing:1.8px;color:var(--blue);font-weight:800;margin-bottom:12px}
+h2{font-family:"Space Grotesk";font-size:clamp(34px,4vw,54px);letter-spacing:-2.4px;line-height:1.05}
+.section-head p{color:var(--muted);line-height:1.75;margin-top:18px}
+.problem{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.problem-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.problem-item{padding:19px;border:1px solid var(--line);border-radius:16px;background:#fff;font-size:13px;color:#475569}
+.problem-item b{display:block;color:#e11d48;margin-bottom:6px}
+.solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:#fff;transition:.3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:rgba(21,87,176,.28)}
+.card:after{content:"";position:absolute;width:130px;height:130px;background:rgba(21,87,176,.05);border-radius:50%;right:-70px;top:-70px}
+.icon{width:48px;height:48px;border-radius:14px;background:#eaf2fc;color:var(--blue);display:grid;place-items:center;font-weight:900;margin-bottom:24px}
+.card h3{font-family:"Space Grotesk";font-size:22px;margin-bottom:10px}.card p{font-size:13px;color:var(--muted);line-height:1.7}.card ul{list-style:none;margin-top:18px;display:grid;gap:8px;color:#475569;font-size:12px}.card li:before{content:"✓";color:var(--blue);font-weight:900;margin-right:8px}
+.tech-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tech{padding:24px;border:1px solid var(--line);border-radius:20px;background:#fff;transition:.25s}
+.tech:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.tech .tag{font-size:10px;color:var(--blue);font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
+.tech h3{font-family:"Space Grotesk";margin:9px 0 7px;font-size:19px}.tech p{font-size:11px;color:var(--muted);line-height:1.6}
+.tech span{display:inline-block;margin-top:16px;font-size:10px;font-weight:800;color:#475569}
+.process{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.step{position:relative;padding:22px 12px;border-top:2px solid #d9e5f4}
+.step:first-child{border-color:var(--blue)}
+.step .num{font-size:10px;font-weight:900;color:var(--blue)}.step h3{font-family:"Space Grotesk";font-size:15px;margin:10px 0 7px}.step p{font-size:10px;color:var(--muted);line-height:1.55}
+.industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.industry{min-height:190px;border-radius:22px;padding:26px;color:#fff;background:linear-gradient(145deg,#071426,#0c2d5d);position:relative;overflow:hidden}
+.industry:after{content:"";position:absolute;width:190px;height:190px;border:1px solid rgba(255,255,255,.1);border-radius:50%;right:-70px;bottom:-90px}
+.industry .num{font-size:10px;color:#93c5fd;font-weight:800}.industry h3{font-family:"Space Grotesk";font-size:22px;margin:35px 0 9px}.industry p{font-size:11px;color:#cbd5e1;line-height:1.6;max-width:250px}
+.impact{background:var(--dark);color:#fff;border-radius:32px;padding:65px}
+.impact-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:42px}
+.impact-card{padding:25px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.04)}.impact-card strong{font-family:"Space Grotesk";font-size:17px;display:block;margin-bottom:8px}.impact-card p{font-size:11px;color:#94a3b8;line-height:1.6}
+.integration{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.stack{display:grid;gap:8px}.stack-row{height:54px;border:1px solid var(--line);border-radius:14px;display:flex;align-items:center;justify-content:center;background:#fff;font-weight:800;font-size:12px;position:relative}.stack-row:not(:last-child):after{content:"↓";position:absolute;bottom:-18px;color:var(--blue);z-index:2;font-size:15px}
+.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:start}.contact-box{padding:35px;border-radius:28px;background:linear-gradient(145deg,#0b3d88,#061225);color:#fff}.contact-box p{color:#cbd5e1;line-height:1.7;font-size:14px;margin-top:16px}.contact-details{display:grid;gap:14px;margin-top:30px}.contact-details div{padding:14px;border:1px solid rgba(255,255,255,.1);border-radius:12px;font-size:12px}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:700;color:#475569}.field input,.field textarea,.field select{width:100%;border:1px solid #dbe5f0;border-radius:12px;padding:13px;outline:none;background:#fff}.field textarea{min-height:125px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(21,87,176,.08)}
+.footer{background:#040c18;color:#cbd5e1;padding:60px 0 25px}.footer-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:40px}.footer h4{color:#fff;margin-bottom:16px;font-size:12px}.footer a{display:block;color:#94a3b8;font-size:12px;margin:9px 0}.footer a:hover{color:#fff}.footer-brand p{font-size:12px;line-height:1.7;color:#94a3b8;max-width:290px;margin-top:16px}.copyright{border-top:1px solid rgba(255,255,255,.08);margin-top:45px;padding-top:20px;font-size:11px;color:#64748b;display:flex;justify-content:space-between}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}.reveal.show{opacity:1;transform:none}
+.toast{position:fixed;right:22px;bottom:22px;background:#071426;color:#fff;padding:14px 18px;border-radius:12px;font-size:12px;transform:translateY(120px);transition:.3s;z-index:999}.toast.show{transform:none}
+@keyframes spin{to{transform:rotate(360deg)}}@keyframes float{50%{transform:translateY(-9px)}} 
+@media(max-width:900px){.nav-links,.nav-cta{display:none}.menu{display:block}.hero-grid,.problem,.integration,.contact{grid-template-columns:1fr}.hero{padding-top:70px}.planet{min-height:400px}.solution-grid{grid-template-columns:1fr 1fr}.tech-grid{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.impact-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.topbar{display:none}.nav{height:68px}.logo img{width:120px}h1{letter-spacing:-2.5px}.hero{padding:65px 0}.section{padding:75px 0}.solution-grid,.tech-grid,.industry-grid,.problem-list,.form,.impact-grid,.footer-grid{grid-template-columns:1fr}.planet{min-height:340px}.orbit.o1{width:290px;height:290px}.orbit.o2{width:215px;height:215px}.orbit.o3{width:135px;height:135px}.core{width:115px;height:115px}.float-card{transform:scale(.88)}.c1{right:-5px}.c4{left:-5px}.impact{padding:35px 22px}.copyright{flex-direction:column;gap:8px}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="container"><span>✦ Enterprise Technology & Digital Transformation</span><span>Serving ambitious businesses in Sri Lanka & beyond</span></div></div>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#home"><img src="thumbnail.jpg" alt="Hari Up Group"></a>
+    <div class="nav-links">
+      <a href="#solutions">Solutions</a><a href="#technology">Technologies</a><a href="#services">Services</a><a href="#industries">Industries</a><a href="#about">About</a><a href="#insights">Insights</a>
+    </div>
+    <a class="nav-cta" href="#contact">Book a Consultation</a>
+    <button class="menu" aria-label="Open menu">☰</button>
+  </div>
+</nav>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="eyebrow">Enterprise Technology Partner</div>
+      <h1>Transform your business with <span class="gradient">smarter technology.</span></h1>
+      <p class="hero-copy">Hari Up Group helps organizations modernize operations through ERP, enterprise applications, business intelligence, automation and digital transformation.</p>
+      <div class="btn-row"><a class="hero-btn" href="#contact">Book a Free Consultation →</a><a class="hero-btn secondary" href="#technology">Explore Solutions</a></div>
+      <div class="hero-note"><span>✓ ERP</span><span>✓ Automation</span><span>✓ Analytics</span><span>✓ Integration</span></div>
+    </div>
+    <div class="planet reveal">
+      <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+      <div class="core"><div><strong>HARI UP</strong><small>CONNECTED BUSINESS</small></div></div>
+      <div class="float-card c1"><b>ERP</b><small>One connected platform</small></div>
+      <div class="float-card c2"><b>Analytics</b><small>Data → decisions</small></div>
+      <div class="float-card c3"><b>Automation</b><small>Less manual work</small></div>
+      <div class="float-card c4"><b>Integration</b><small>Systems that talk</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="solutions">
+ <div class="container">
+  <div class="section-head reveal"><div class="kicker">The challenge</div><h2>Does your technology keep up with your business?</h2><p>Disconnected systems create hidden costs. We help turn fragmented operations into connected digital ecosystems.</p></div>
+  <div class="problem">
+   <div class="reveal"><h2 style="font-size:35px">From <span class="gradient">complexity</span> to clarity.</h2><p style="color:var(--muted);line-height:1.8;margin-top:16px">Your business should not have to work around your software. Your technology should work around your business.</p></div>
+   <div class="problem-list reveal"><div class="problem-item"><b>01</b>Too many spreadsheets</div><div class="problem-item"><b>02</b>Disconnected systems</div><div class="problem-item"><b>03</b>Manual reporting</div><div class="problem-item"><b>04</b>Poor visibility</div><div class="problem-item"><b>05</b>Duplicate data entry</div><div class="problem-item"><b>06</b>Slow decisions</div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="services">
+ <div class="container">
+  <div class="section-head reveal"><div class="kicker">What we do</div><h2>Technology that creates business value.</h2><p>We combine business understanding with enterprise technology to solve practical problems and create scalable foundations.</p></div>
+  <div class="solution-grid">
+   <div class="card reveal"><div class="icon">01</div><h3>ERP Consulting</h3><p>Evaluate business requirements, processes and technology options before making a strategic ERP decision.</p><ul><li>Business process assessment</li><li>ERP selection support</li><li>Gap analysis</li></ul></div>
+   <div class="card reveal"><div class="icon">02</div><h3>ERP Implementation</h3><p>Design, configure, migrate, integrate and launch ERP platforms around your business.</p><ul><li>Implementation</li><li>Migration</li><li>Training & go-live</li></ul></div>
+   <div class="card reveal"><div class="icon">03</div><h3>Business Automation</h3><p>Reduce repetitive work through connected workflows, approvals, notifications and automation.</p><ul><li>Workflow automation</li><li>System integration</li><li>Process optimization</li></ul></div>
+   <div class="card reveal"><div class="icon">04</div><h3>Business Intelligence</h3><p>Turn operational data into dashboards, KPIs and management insights.</p><ul><li>Power BI</li><li>Management dashboards</li><li>Analytics</li></ul></div>
+   <div class="card reveal"><div class="icon">05</div><h3>Microsoft 365</h3><p>Improve productivity, collaboration and digital workplace capabilities.</p><ul><li>Microsoft 365</li><li>Teams & SharePoint</li><li>Power Platform</li></ul></div>
+   <div class="card reveal"><div class="icon">06</div><h3>Support & Optimization</h3><p>Keep systems healthy and continuously improve the way teams use technology.</p><ul><li>Application support</li><li>User support</li><li>Continuous improvement</li></ul></div>
+  </div>
+ </div>
+</section>
+
+<section class="section soft" id="technology">
+ <div class="container">
+  <div class="section-head reveal"><div class="kicker">Technology ecosystem</div><h2>The right technology for the right business.</h2><p>We help organizations evaluate, implement and optimize technology based on their business requirements — not simply software features.</p></div>
+  <div class="tech-grid">
+   <div class="tech reveal"><div class="tag">ERP</div><h3>SAP Business One</h3><p>Integrated ERP for growing and mid-sized organizations.</p><span>ERP • Finance • Supply Chain</span></div>
+   <div class="tech reveal"><div class="tag">ERP</div><h3>SAP S/4HANA</h3><p>Enterprise-grade digital transformation and business processes.</p><span>Enterprise • Finance • Operations</span></div>
+   <div class="tech reveal"><div class="tag">ERP</div><h3>Odoo</h3><p>Flexible, modular ERP for growing businesses.</p><span>CRM • Sales • Inventory</span></div>
+   <div class="tech reveal"><div class="tag">Enterprise Apps</div><h3>IFS</h3><p>Enterprise applications for complex and asset-intensive operations.</p><span>ERP • Assets • Projects</span></div>
+   <div class="tech reveal"><div class="tag">Cloud ERP</div><h3>Acumatica</h3><p>Cloud ERP designed for growing and connected businesses.</p><span>Finance • Distribution • Manufacturing</span></div>
+   <div class="tech reveal"><div class="tag">Enterprise</div><h3>Oracle</h3><p>Enterprise applications, cloud and technology solutions.</p><span>ERP • Cloud • Data</span></div>
+   <div class="tech reveal"><div class="tag">Productivity</div><h3>Microsoft 365</h3><p>Connected collaboration, productivity and business tools.</p><span>Teams • SharePoint • Power Platform</span></div>
+   <div class="tech reveal"><div class="tag">Analytics</div><h3>Power BI</h3><p>Turn business data into visual insights and decisions.</p><span>Dashboards • KPIs • Analytics</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="industries">
+ <div class="container">
+  <div class="section-head reveal"><div class="kicker">Industries</div><h2>Technology built around your industry.</h2><p>Explore practical technology approaches for different operating models.</p></div>
+  <div class="industry-grid">
+   <div class="industry reveal"><div class="num">01</div><h3>Manufacturing</h3><p>Production, planning, inventory, costing and supply chain.</p></div>
+   <div class="industry reveal"><div class="num">02</div><h3>Retail & Distribution</h3><p>Sales, purchasing, inventory, finance and customer operations.</p></div>
+   <div class="industry reveal"><div class="num">03</div><h3>Trading</h3><p>Procurement, inventory, sales and financial control.</p></div>
+   <div class="industry reveal"><div class="num">04</div><h3>Construction</h3><p>Projects, procurement, costing, finance and resources.</p></div>
+   <div class="industry reveal"><div class="num">05</div><h3>Professional Services</h3><p>CRM, projects, timesheets, finance and resources.</p></div>
+   <div class="industry reveal"><div class="num">06</div><h3>Logistics</h3><p>Operations, inventory, fleet and supply chain visibility.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section soft">
+ <div class="container">
+  <div class="impact reveal">
+   <div class="kicker" style="color:#60a5fa">Business outcomes</div><h2>Technology should create <span style="color:#60a5fa">value.</span></h2>
+   <div class="impact-grid"><div class="impact-card"><strong>Connect</strong><p>Connect departments, systems and data.</p></div><div class="impact-card"><strong>Automate</strong><p>Reduce repetitive manual processes.</p></div><div class="impact-card"><strong>Visualize</strong><p>Turn data into actionable insights.</p></div><div class="impact-card"><strong>Control</strong><p>Improve operational and financial visibility.</p></div><div class="impact-card"><strong>Scale</strong><p>Build foundations for future growth.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="container integration">
+  <div class="reveal"><div class="kicker">Connected ecosystem</div><h2>Connect the systems that run your business.</h2><p style="color:var(--muted);line-height:1.8;margin-top:18px">ERP, CRM, eCommerce, banking, Microsoft 365 and analytics should not operate in isolation. Build a connected flow of information across the organization.</p></div>
+  <div class="stack reveal"><div class="stack-row">ERP / Enterprise Applications</div><div class="stack-row">CRM & Sales</div><div class="stack-row">eCommerce & Third-Party Apps</div><div class="stack-row">Microsoft 365 & Collaboration</div><div class="stack-row">Power BI & Management Insights</div></div>
+ </div>
+</section>
+
+<section class="section soft" id="about">
+ <div class="container">
+  <div class="section-head reveal"><div class="kicker">About Hari Up Group</div><h2>We believe technology should make business simpler.</h2><p>Hari Up Group is an enterprise technology and digital transformation company helping organizations modernize operations, connect systems and make better decisions.</p></div>
+  <div class="solution-grid">
+   <div class="card reveal"><div class="icon">✓</div><h3>Business-first thinking</h3><p>We focus on business outcomes, processes and practical technology decisions.</p></div>
+   <div class="card reveal"><div class="icon">↗</div><h3>Multi-platform perspective</h3><p>Different organizations need different technology platforms. We help evaluate the fit.</p></div>
+   <div class="card reveal"><div class="icon">∞</div><h3>Long-term partnership</h3><p>Go-live is a milestone. Continuous support and improvement create lasting value.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="contact">
+ <div class="container contact">
+  <div class="contact-box reveal"><div class="kicker" style="color:#93c5fd">Start a conversation</div><h2 style="color:#fff">Let's build your next digital advantage.</h2><p>Whether you're selecting an ERP, replacing an existing system, improving processes or exploring automation, start with a conversation.</p><div class="contact-details"><div>📞 +94 76 279 2298</div><div>💼 Hari Up Group — LinkedIn</div><div>🌐 Sri Lanka & International Opportunities</div></div></div>
+  <form class="form reveal" id="leadForm">
+   <div class="field"><label>Full Name</label><input required placeholder="Your name"></div>
+   <div class="field"><label>Company</label><input placeholder="Company name"></div>
+   <div class="field"><label>Business Email</label><input type="email" required placeholder="you@company.com"></div>
+   <div class="field"><label>Phone</label><input placeholder="+94..."></div>
+   <div class="field"><label>Industry</label><select><option>Select industry</option><option>Manufacturing</option><option>Retail & Distribution</option><option>Trading</option><option>Construction</option><option>Professional Services</option><option>Other</option></select></div>
+   <div class="field"><label>Area of Interest</label><select><option>Select solution</option><option>SAP Business One</option><option>SAP S/4HANA</option><option>Odoo</option><option>IFS</option><option>Acumatica</option><option>Oracle</option><option>Microsoft 365</option><option>Power BI</option><option>ERP Consulting</option><option>Business Automation</option></select></div>
+   <div class="field full"><label>How can we help?</label><textarea placeholder="Tell us about your business challenge..."></textarea></div>
+   <div class="field full"><button class="form-btn" type="submit">Send Enquiry →</button></div>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="footer">
+ <div class="container">
+  <div class="footer-grid">
+   <div class="footer-brand"><a class="logo" href="#home"><img src="thumbnail.jpg" alt="Hari Up Group"></a><p>Smart technology. Better business. Enterprise technology and digital transformation for ambitious organizations.</p></div>
+   <div><h4>Solutions</h4><a href="#technology">SAP Business One</a><a href="#technology">SAP S/4HANA</a><a href="#technology">Odoo</a><a href="#technology">IFS</a></div>
+   <div><h4>Technology</h4><a href="#technology">Acumatica</a><a href="#technology">Oracle</a><a href="#technology">Microsoft 365</a><a href="#technology">Power BI</a></div>
+   <div><h4>Company</h4><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a><a href="https://www.linkedin.com/company/hari-up-group/" target="_blank">LinkedIn ↗</a></div>
+  </div>
+  <div class="copyright"><span>© 2026 Hari Up Group. All rights reserved.</span><span>Smart Technology. Better Business.</span></div>
+ </div>
+</footer>
+<div class="toast" id="toast">Thanks! Your enquiry is ready to be connected to your preferred lead system.</div>
+
+<script>
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+document.querySelector('.menu').addEventListener('click',()=>{
+  const nav=document.querySelector('.nav-links');
+  const open=nav.style.display==='flex';
+  nav.style.display=open?'none':'flex';
+  if(!open){nav.style.position='absolute';nav.style.top='68px';nav.style.left='0';nav.style.right='0';nav.style.padding='20px';nav.style.background='#fff';nav.style.flexDirection='column';nav.style.boxShadow='0 20px 40px rgba(0,0,0,.08)'}
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',()=>{document.querySelector('.nav-links').style.display=''});
+});
+
+document.getElementById('leadForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('toast').classList.add('show');
+  setTimeout(()=>document.getElementById('toast').classList.remove('show'),3500);
+});
+</script>
+</body>
+</html>
